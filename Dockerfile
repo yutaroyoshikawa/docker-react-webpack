@@ -2,7 +2,6 @@ FROM node:7.9.0
 
 WORKDIR /app
 COPY ./app/webpack.config.js /app/webpack.config.js
-#COPY ./package.json /app/package.json
 COPY ./app/src /app/src
 COPY ./app/dist /app/dist
 
