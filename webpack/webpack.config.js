@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -20,9 +21,9 @@ module.exports = {
         use: [
           {
             loader: 'babel-loader',
-            options: {
-              presets: ['env', 'react'],
-            },
+            // options: {
+            //   presets: ['env', 'react'],
+            // },
           },
         ],
         exclude: /node_modules/,

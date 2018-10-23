@@ -1,10 +1,10 @@
-FROM node:7.9.0
+FROM node:latest
 
 WORKDIR /app
 COPY ./webpack.config.js /app/webpack.config.js
 
-RUN npm init -y
-RUN npm install --save react react-dom
-RUN npm install --save-dev webpack webpack-cli webpack-dev-server babel-loader babel-core babel-preset-react babel-preset-env
+RUN npm install -g yarn
+RUN yarn init -y
+RUN yarn add webpack webpack-cli webpack-dev-server babel-loader@7 babel-core babel-preset-react babel-preset-env
 
 CMD /app/node_modules/.bin/webpack-dev-server --hot
